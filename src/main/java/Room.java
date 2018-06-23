@@ -24,7 +24,7 @@ public abstract class Room {
 
     }
 
-    public void removeGuest(){
+    public void removeGuests(){
         this.guests.clear();
     }
 

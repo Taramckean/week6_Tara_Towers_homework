@@ -12,9 +12,9 @@ public class BedroomTest {
     @Before
     public void setUp() {
         bedroom = new Bedroom(2, 4, "Luxury", 80);
-        guest1 = new Guest("Tara");
-        guest2 = new Guest("Richard");
-        guest3 = new Guest("Campbelle");
+        guest1 = new Guest("Tara", 100);
+        guest2 = new Guest("Richard", 80);
+        guest3 = new Guest("Campbelle", 90);
         bedroom.addGuest(guest1);
     }
 
@@ -45,7 +45,7 @@ public class BedroomTest {
 
     @Test
     public void canRemoveGuest(){
-        bedroom.removeGuest();
+        bedroom.removeGuests();
         assertEquals(0, bedroom.countGuests());
     }
 

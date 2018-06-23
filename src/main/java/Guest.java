@@ -1,8 +1,10 @@
 public class Guest {
     private String name;
+    private int money;
 
-    public Guest(String name){
+    public Guest(String name, int money){
         this.name = name;
+        this.money = money;
     }
 
     public String getName(){
@@ -10,5 +12,8 @@ public class Guest {
     }
 
 
+    public int countMoney() {
+        return this.money;
+    }
 }
 

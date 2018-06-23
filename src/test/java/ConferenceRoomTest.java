@@ -10,7 +10,7 @@ public class ConferenceRoomTest {
     @Before
     public void setUp(){
         conferenceRoom = new ConferenceRoom(100, "Blue Room", 150);
-        guest1 = new Guest("Campbelle");
+        guest1 = new Guest("Campbelle", 100);
         conferenceRoom.addGuest(guest1);
     }
 
@@ -35,8 +35,8 @@ public class ConferenceRoomTest {
     }
 
     @Test
-    public void canRemoveGuest(){
-    conferenceRoom.removeGuest();
+    public void canRemoveGuests(){
+    conferenceRoom.removeGuests();
     assertEquals(0, conferenceRoom.countGuests());
     }
 
