@@ -34,8 +34,8 @@ public class BedroomTest {
     }
 
     @Test
-    public void canGetRate(){
-        assertEquals(80, bedroom.getRate());
+    public void canGetNightlyRate(){
+        assertEquals(80, bedroom.getNightlyRate());
     }
 
     @Test
@@ -60,7 +60,6 @@ public class BedroomTest {
         bedroom.addGuest(guest2);
         bedroom.addGuest(guest3);
         assertEquals(2, bedroom.countGuests());
-
     }
 
 }
