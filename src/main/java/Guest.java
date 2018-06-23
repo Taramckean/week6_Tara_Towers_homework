@@ -15,5 +15,7 @@ public class Guest {
     public int countMoney() {
         return this.money;
     }
+
+
 }
 

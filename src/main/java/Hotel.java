@@ -33,22 +33,24 @@ public class Hotel {
 
     public int countHotelGuests() {
         int counter = 0;
-        for (Room room : roomCollection)
-          { counter += room.countGuests();
-           }
-           return counter;
-         }
+        for (Room room : roomCollection) {
+            counter += room.countGuests();
+        }
+        return counter;
+    }
 
 
     public void checkGuestIn(Guest guest, Bedroom bedroom) {
         if (guest.countMoney() >= bedroom.getNightlyRate())
-        bedroom.addGuest(guest);
+            bedroom.addGuest(guest);
     }
 
     public void checkGuestsOut(Bedroom bedroom) {
         bedroom.removeGuests();
     }
-}
 
+
+
+}
 
 

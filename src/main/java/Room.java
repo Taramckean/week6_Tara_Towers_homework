@@ -28,6 +28,24 @@ public abstract class Room {
         this.guests.clear();
     }
 
+    public String guestList() {
+        ArrayList names = new ArrayList();
+        for (Guest guest : guests) {
+            names.add(guest.getName());
+        }
+        String result = names.toString();
+        return result.replace("[", "").replace("]", "");
+
+
+    }
+
+
+
 }
+
+
+
+
+
 
 
