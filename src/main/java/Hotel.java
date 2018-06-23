@@ -41,8 +41,10 @@ public class Hotel {
 
 
     public void checkGuestIn(Guest guest, Bedroom bedroom) {
-        if (guest.countMoney() >= bedroom.getNightlyRate())
+        if (guest.countMoney() >= bedroom.getNightlyRate()) {
+            guest.money -= bedroom.getNightlyRate();
             bedroom.addGuest(guest);
+        }
     }
 
     public void checkGuestsOut(Bedroom bedroom) {

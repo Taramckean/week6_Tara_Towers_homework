@@ -49,9 +49,21 @@ public class HotelTest {
     }
 
     @Test
+    public void hotelCanChargeGuest(){
+        hotel.checkGuestIn(guest1, bedroom1);
+        assertEquals(10, guest1.money);
+    }
+
+    @Test
     public void cantCheckPoorGuestIn(){
         hotel.checkGuestIn(guest2, bedroom1);
         assertEquals(0,bedroom1.countGuests());
+    }
+
+    @Test
+    public void poorGuestMoneyStaysTheSameI(){
+        hotel.checkGuestIn(guest2, bedroom1);
+        assertEquals(5, guest2.money);
     }
 
     @Test
